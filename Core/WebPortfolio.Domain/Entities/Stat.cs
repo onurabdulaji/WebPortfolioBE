@@ -4,8 +4,19 @@ namespace WebPortfolio.Domain.Entities;
 
 public class Stat : EntityBase
 {
-    public int? StatClient { get; set; }
-    public int? StatProject { get; set; }
-    public int? StatSupport { get; set; }
-    public int? StatWorker { get; set; }
+    public int? Client { get; set; }
+    public int? Project { get; set; }
+    public int? Support { get; set; }
+    public int? Worker { get; set; }
+    public Stat()
+    {
+        
+    }
+    public Stat(int client , int project , int support , int worker)
+    {
+        Client = client;
+        Project = project;
+        Support = support;
+        Worker = worker;
+    }
 }

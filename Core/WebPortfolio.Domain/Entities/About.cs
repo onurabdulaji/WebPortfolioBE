@@ -15,9 +15,7 @@ public class About : EntityBase
     public string? Email { get; set; }
     public string? City { get; set; }
     public bool? IsFreelanceAvailable { get; set; }
-
     public About() { }
-
     public About(
         string title,
         string description,
