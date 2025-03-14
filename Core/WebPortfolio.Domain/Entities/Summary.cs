@@ -4,9 +4,21 @@ namespace WebPortfolio.Domain.Entities;
 
 public class Summary : EntityBase
 {
-    public string? SummaryName { get; set; }
-    public string? SummaryDescription { get; set; }
-    public string? SummaryAddress { get; set; }
-    public string? SummaryPhone { get; set; }
-    public string? SummaryEmail { get; set; }
+    public string? Name { get; set; }
+    public string? Description { get; set; }
+    public string? Address { get; set; }
+    public string? Phone { get; set; }
+    public string? Email { get; set; }
+    public Summary()
+    {
+        
+    }
+    public Summary(string name , string description , string address ,string phone , string email)
+    {
+        Name = name;
+        Description = description;
+        Address = address;
+        Phone = phone;
+        Email = email;
+    }
 }

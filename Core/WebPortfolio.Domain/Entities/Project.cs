@@ -4,16 +4,25 @@ namespace WebPortfolio.Domain.Entities;
 
 public class Project : EntityBase
 {
-    public string? ProjectTitle { get; set; }
-    public string? ProjectDescription { get; set; }
-    public string? ProjectSmallImage { get; set; }
-    public string? ProjectCategory { get; set; }
-    public string? ProjectClient { get; set; }
-    public DateTime? ProjectDate { get; set; }
-    public string? ProjectLink { get; set; }
-    public string? ProjectImage1 { get; set; }
-    public string? ProjectImage2 { get; set; }
-    public string? ProjectImage3 { get; set; }
-    public string? ProjectImage4 { get; set; }
+    public string? Title { get; set; } 
+    public string? Description { get; set; } 
+    public string? SmallImage { get; set; }
+    public string? Category { get; set; } 
+    public string? Client { get; set; }
+    public DateTime? Date { get; set; } 
+    public string? Link { get; set; }
+    public ICollection<string>? Images { get; set; } // 'ProjectImage1', 'ProjectImage2'
+    public Project() { }
+    public Project(string? title, string? description, string? smallImage, string? category, string? client, DateTime? date, string? link, ICollection<string>? images)
+    {
+        Title = title;
+        Description = description;
+        SmallImage = smallImage;
+        Category = category;
+        Client = client;
+        Date = date;
+        Link = link;
+        Images = images ?? new List<string>(); // Default empty list
+    }
 
 }

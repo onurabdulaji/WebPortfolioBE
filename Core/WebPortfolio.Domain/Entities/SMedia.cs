@@ -4,7 +4,16 @@ namespace WebPortfolio.Domain.Entities;
 
 public class SMedia : EntityBase
 {
-    public string? SMediaTitle { get; set; }
-    public string? SMediaIcon { get; set; }
-    public string? SMediaLink { get; set; }
+    public string? Title { get; set; }
+    public string? Icon { get; set; }
+    public string? Link { get; set; }
+    public SMedia()
+    {
+    }
+    public SMedia(string title ,string icon,string link)
+    {
+        Title = title;
+        Icon = icon;
+        Link = link;
+    }
 }

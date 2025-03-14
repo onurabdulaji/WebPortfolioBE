@@ -4,7 +4,17 @@ namespace WebPortfolio.Domain.Entities;
 
 public class Service : EntityBase
 {
-    public string? ServiceTitle { get; set; }
-    public string? ServiceDescription { get; set; }
-    public string? ServiceIcon { get; set; }
+    public string? Title { get; set; }
+    public string? Description { get; set; }
+    public string? Icon { get; set; }
+    public Service()
+    {
+        
+    }
+    public Service(string title , string description , string icon)
+    {
+        Title = title;
+        Description = description;
+        Icon = icon;
+    }
 }

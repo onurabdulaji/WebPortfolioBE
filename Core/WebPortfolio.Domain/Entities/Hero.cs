@@ -4,7 +4,14 @@ namespace WebPortfolio.Domain.Entities;
 
 public class Hero:EntityBase
 {
-    public string? HeroTitle { get; set; }
-    public string? HeroSubTitle { get; set; }
-    public string? HeroBackgroundImageUrl { get; set; }
+    public string? Title { get; set; }
+    public string? SubTitle { get; set; }
+    public string? BackgroundImageUrl { get; set; }
+    public Hero() { }
+    public Hero(string? title, string? subTitle, string? backgroundImageUrl)
+    {
+        Title = title;
+        SubTitle = subTitle;
+        BackgroundImageUrl = backgroundImageUrl;
+    }
 }
